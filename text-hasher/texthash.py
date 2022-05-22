@@ -1,7 +1,7 @@
 import hashlib
 import sys
 
-balls = input("Enter the password to be hashed: ")
+balls = input("Enter the text to be hashed: ")
 md5_object = hashlib.md5(str(balls).encode("utf-8"))
 sha256_object = hashlib.sha256(str(balls).encode("utf-8"))
 
@@ -16,7 +16,7 @@ def input_error():
     elif len(balls) > 2048:
         print(
             "USAGE: \n",
-            "   passhash [PASS < 2048]"
+            "   texthash [PASS < 2048]"
         )
         sys.exit()
 
