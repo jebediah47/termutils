@@ -22,8 +22,9 @@ def input_error():
 
 def yt_mp4():
     vid = yt.streams.get_highest_resolution()
+    print(f"Downloading video with these parameters: {vid}")
     vid.download()
-    print(f"Completed the download of {vid}")
+    print("Downloaded video successfully!")
 
 
 if __name__ == "__main__":
